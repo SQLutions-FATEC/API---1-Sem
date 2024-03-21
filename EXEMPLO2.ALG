@@ -2,11 +2,11 @@ Algoritmo "exemplo2"
 
 Var
 
-nome: caractere
+num: inteiro
 Inicio
 
-   escreval("Digite seu nome:")
-   leia(nome)
-   escreval("Seu nome �:",nome)
+   escreval("Digite um número:")
+   leia(num)
+   escreval("O número digitado é:",num)
 
 Fimalgoritmo
