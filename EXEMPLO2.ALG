@@ -5,8 +5,8 @@ Var
 num: inteiro
 Inicio
 
-   escreval("Digite um número:")
+   escreval("Digite um numero:")
    leia(num)
-   escreval("O número digitado é:",num)
+   escreval("O numero digitado e:",num)
 
 Fimalgoritmo
