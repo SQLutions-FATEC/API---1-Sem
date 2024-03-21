@@ -4,6 +4,6 @@ Var
 
 Inicio
 
-   escreval("hello world!")
+   escreval("ola, mundo!")
 
 Fimalgoritmo
