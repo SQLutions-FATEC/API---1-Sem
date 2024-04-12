@@ -1,41 +1,141 @@
-Algoritmo "Calculadora Científica"
+Algoritmo "Calculadora Cientifica"
 
 Var
-opcao,retornar,rpt: inteiro
+opcao,retornar,rpt,i: inteiro
 num1,num2,result,resto: real
 
 Inicio
 
 repita
+   escreval("______________________________")
+   escreval("|  Calculadora Cientifica    |")
+   escreval("|----------------------------|")
+   escreval("| 1 - Soma                   |")
+   escreval("| 2 - Subtracao              |")
+   escreval("| 3 - Multiplicacao          |")
+   escreval("| 4 - Divisao                |")
+   escreval("| 5 - Fatorial               |")
+   escreval("| 6 - Funcao de 2o grau      |")
+   escreval("| 7 - Conversao de Base Num. |")
+   escreval("| 8 - Concatenacao de string |")
+   escreval("| 9 - Juros                  |")
+   escreval("| 0 - Sair                   |")
+   escreval("|____________________________|")
+   escreva("| Selecione uma opcao:")
+   leia(opcao)
 
-      escreval("______________________________")
-      escreval("|  Calculadora Cientifica    |")
-      escreval("|----------------------------|")
-      escreval("| 1 - Soma                   |")
-      escreval("| 2 - Subtracao              |")
-      escreval("| 3 - Multiplicacao          |")
-      escreval("| 4 - Divisao                |")
-      escreval("| 5 - Fatorial               |")
-      escreval("| 6 - Funcao de 2o grau      |")
-      escreval("| 7 - Conversao de Base Num. |")
-      escreval("| 8 - Concatenacao de string |")
-      escreval("| 9 - Juros                  |")
-      escreval("| 0 - Sair                   |")
-      escreval("|____________________________|")
-      escreva("| Selecione uma opcao:")
-      leia(opcao)
 
    limpatela
 
    escolha opcao
       caso 1
-         escreval("Soma")
+         se result <> 0 entao
+            num1 <- result
+         senao
+            escreval("______________________________")
+            escreval("|  Calculadora Cientifica    |")
+            escreval("|----------------------------|")
+            escreval("| num1 + num2 = resultado")
+            escreva("| Digite o primeiro numero:")
+            leia(num1)
+            limpatela
+         fimse
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",num1," + num2 = resultado")
+         escreva("| Digite o segundo numero:")
+         leia(num2)
+         limpatela
+
+         result <- num1 + num2
+
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",num1," +",num2," =",result)
+
       caso 2
-         escreval("Subtracao")
+         se result <> 0 entao
+            num1 <- result
+         senao
+            escreval("______________________________")
+            escreval("|  Calculadora Cientifica    |")
+            escreval("|----------------------------|")
+            escreval("| num1 - num2 = resultado")
+            escreva("| Digite o primeiro numero:")
+            leia(num1)
+            limpatela
+         fimse
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",num1," - num2 = resultado")
+         escreva("| Digite o segundo numero:")
+         leia(num2)
+         limpatela
+
+         result <- num1 - num2
+
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",num1," -",num2," =",result)
+
       caso 3
-         escreval("Multiplicacao")
+         se result <> 0 entao
+            num1 <- result
+         senao
+            escreval("______________________________")
+            escreval("|  Calculadora Cientifica    |")
+            escreval("|----------------------------|")
+            escreval("| num1 * num2 = resultado")
+            escreva("| Digite o primeiro numero:")
+            leia(num1)
+            limpatela
+         fimse
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",num1," * num2 = resultado")
+         escreva("| Digite o segundo numero:")
+         leia(num2)
+         limpatela
+
+         result <- num1 * num2
+
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",num1," *",num2," =",result)
+
       caso 4
-         escreval("Divisao")
+         se result <> 0 entao
+            num1 <- result
+         senao
+            escreval("______________________________")
+            escreval("|  Calculadora Cientifica    |")
+            escreval("|----------------------------|")
+            escreval("| num1 / num2 = resultado")
+            escreva("| Digite o primeiro numero:")
+            leia(num1)
+            limpatela
+         fimse
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",num1," / num2 = resultado")
+         escreva("| Digite o segundo numero:")
+         leia(num2)
+         limpatela
+
+         result <- num1 / num2
+
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",num1," /",num2," =",result)
+
       caso 5
          escreval("Fatorial")
       caso 6
