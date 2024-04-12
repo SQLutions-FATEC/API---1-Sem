@@ -7,23 +7,56 @@ num1,num2,result,resto: real
 Inicio
 
 repita
-   escreval("______________________________")
-   escreval("|  Calculadora Cientifica    |")
-   escreval("|----------------------------|")
-   escreval("| 1 - Soma                   |")
-   escreval("| 2 - Subtracao              |")
-   escreval("| 3 - Multiplicacao          |")
-   escreval("| 4 - Divisao                |")
-   escreval("| 5 - Fatorial               |")
-   escreval("| 6 - Funcao de 2o grau      |")
-   escreval("| 7 - Conversao de Base Num. |")
-   escreval("| 8 - Concatenacao de string |")
-   escreval("| 9 - Juros                  |")
-   escreval("| 0 - Sair                   |")
-   escreval("|____________________________|")
-   escreva("| Selecione uma opcao:")
-   leia(opcao)
+   se result <> 0 entao
+      escreval("______________________________")
+      escreval("|  Calculadora Cientifica    |")
+      escreval("|----------------------------|")
+      escreval("| Valor na memoria:",result)
+      escreval("|----------------------------|")
+      escreval("| 1 - Soma                   |")
+      escreval("| 2 - Subtracao              |")
+      escreval("| 3 - Multiplicacao          |")
+      escreval("| 4 - Divisao                |")
+      escreval("| 0 - Sair                   |")
+      escreval("|____________________________|")
+      escreva("| Selecione uma opcao:")
+      leia(opcao)
 
+      se (opcao > 4) ou (opcao < 0) entao
+         repita
+            escreval("______________________________")
+            escreval("|  Calculadora Cientifica    |")
+            escreval("|----------------------------|")
+            escreval("| Valor na memoria:",result)
+            escreval("|----------------------------|")
+            escreval("| 1 - Soma                   |")
+            escreval("| 2 - Subtracao              |")
+            escreval("| 3 - Multiplicacao          |")
+            escreval("| 4 - Divisao                |")
+            escreval("| 0 - Sair                   |")
+            escreval("|____________________________|")
+            escreva("| Selecione uma opcao valida:")
+            leia(opcao)
+         ate (opcao <= 4) e (opcao >= 0)
+      fimse
+   senao
+      escreval("______________________________")
+      escreval("|  Calculadora Cientifica    |")
+      escreval("|----------------------------|")
+      escreval("| 1 - Soma                   |")
+      escreval("| 2 - Subtracao              |")
+      escreval("| 3 - Multiplicacao          |")
+      escreval("| 4 - Divisao                |")
+      escreval("| 5 - Fatorial               |")
+      escreval("| 6 - Funcao de 2o grau      |")
+      escreval("| 7 - Conversao de Base Num. |")
+      escreval("| 8 - Concatenacao de string |")
+      escreval("| 9 - Juros                  |")
+      escreval("| 0 - Sair                   |")
+      escreval("|____________________________|")
+      escreva("| Selecione uma opcao:")
+      leia(opcao)
+   fimse
 
    limpatela
 
