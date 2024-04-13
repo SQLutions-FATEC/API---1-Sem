@@ -3,6 +3,7 @@ Var
 num, opcao, i, res : inteiro
 Inicio
 opcao<- 0
+enquanto opcao <> 1 faca
 escreval("Digite o numero para o calculo do fatorial: ")
 leia(num)
 se num < 0 entao
@@ -25,4 +26,10 @@ fimpara
 escreval("O fatorial de ", num, " resulta em ", res)
 escreval("============================================")
 fimse
+escreval("Deseja realizar o fatorial de outro valor?")
+escreval("Sim[0]")
+escreval("Nao[1]")
+leia(opcao)
+escreval("============================================")
+fimenquanto
 Fimalgoritmo
