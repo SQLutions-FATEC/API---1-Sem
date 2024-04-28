@@ -1,63 +1,29 @@
 Algoritmo "Calculadora Cientifica"
 
 Var
-opcao,retornar,rpt,i: inteiro
+opcao,opcaobase,retornar,rpt,i: inteiro
 num1,num2,result,resto: real
+conversao: caractere
 
 Inicio
 
 repita
-   se result <> 0 entao
-      escreval("______________________________")
-      escreval("|  Calculadora Cientifica    |")
-      escreval("|----------------------------|")
-      escreval("| Valor na memoria:",result)
-      escreval("|----------------------------|")
-      escreval("| 1 - Soma                   |")
-      escreval("| 2 - Subtracao              |")
-      escreval("| 3 - Multiplicacao          |")
-      escreval("| 4 - Divisao                |")
-      escreval("| 0 - Sair                   |")
-      escreval("|____________________________|")
-      escreva("| Selecione uma opcao:")
-      leia(opcao)
-
-      se (opcao > 4) ou (opcao < 0) entao
-         repita
-            escreval("______________________________")
-            escreval("|  Calculadora Cientifica    |")
-            escreval("|----------------------------|")
-            escreval("| Valor na memoria:",result)
-            escreval("|----------------------------|")
-            escreval("| 1 - Soma                   |")
-            escreval("| 2 - Subtracao              |")
-            escreval("| 3 - Multiplicacao          |")
-            escreval("| 4 - Divisao                |")
-            escreval("| 0 - Sair                   |")
-            escreval("|____________________________|")
-            escreva("| Selecione uma opcao valida:")
-            leia(opcao)
-         ate (opcao <= 4) e (opcao >= 0)
-      fimse
-   senao
-      escreval("______________________________")
-      escreval("|  Calculadora Cientifica    |")
-      escreval("|----------------------------|")
-      escreval("| 1 - Soma                   |")
-      escreval("| 2 - Subtracao              |")
-      escreval("| 3 - Multiplicacao          |")
-      escreval("| 4 - Divisao                |")
-      escreval("| 5 - Fatorial               |")
-      escreval("| 6 - Funcao de 2o grau      |")
-      escreval("| 7 - Conversao de Base Num. |")
-      escreval("| 8 - Concatenacao de string |")
-      escreval("| 9 - Juros                  |")
-      escreval("| 0 - Sair                   |")
-      escreval("|____________________________|")
-      escreva("| Selecione uma opcao:")
-      leia(opcao)
-   fimse
-
+   escreval("______________________________")
+   escreval("|  Calculadora Cientifica    |")
+   escreval("|----------------------------|")
+   escreval("| 1 - Soma                   |")
+   escreval("| 2 - Subtracao              |")
+   escreval("| 3 - Multiplicacao          |")
+   escreval("| 4 - Divisao                |")
+   escreval("| 5 - Fatorial               |")
+   escreval("| 6 - Funcao de 2o grau      |")
+   escreval("| 7 - Conversao de Base Num. |")
+   escreval("| 8 - Concatenacao de string |")
+   escreval("| 9 - Juros                  |")
+   escreval("| 0 - Sair                   |")
+   escreval("|____________________________|")
+   escreva("| Selecione uma opcao:")
+   leia(opcao)
    limpatela
 
    escolha opcao
@@ -174,7 +140,50 @@ repita
       caso 6
          escreval("Funcao de 2o Grau")
       caso 7
-         escreval("Conversao de base numerica")
+            escreval("______________________________")
+            escreval("|    Conversor de bases      |")
+            escreval("|----------------------------|")
+            escreval("| 1 - B10 x B2               |")
+            escreval("| 2 - B2 x B10               |")
+            escreval("| 3 - B2 x B8                |")
+            escreval("| 4 - B8 x B2                |")
+            escreval("| 5 - B2 x B16               |")
+            escreval("| 6 - B16 x B2               |")
+            escreval("| 0 - Voltar                 |")
+            escreval("|____________________________|")
+            escreva("| Selecione uma conversao:")
+            leia(opcaobase)
+            
+            escolha opcaobase
+               caso 1
+                  escreval("______________________________")
+                  escreval("|     Conversor de bases     |")
+                  escreval("|----------------------------|")
+                  escreval("| num(B10) = resultado(B2)")
+                  escreva("| Digite o valor em decimal:")
+                  leia(num1)
+
+                  enquanto (num1 > 0) faca
+                     escolha (num1 mod 2)
+                        caso 0
+                        conversao <- ("0"+conversao)
+                        caso 1
+                        conversao <- ("1"+conversao)
+                        outrocaso
+                        conversao <- "invalido"
+                     fimescolha
+                     num1 <- (num1 div 2)
+                  fimenquanto
+                  se conversao != "invalido" entao
+                     escreval("______________________________")
+                     escreval("|     Conversor de bases     |")
+                     escreval("|----------------------------|")
+                     escreval("| ",num1,"(B10) = ",conversao,"(B2)")
+                     escreva("| Digite o valor em decimal:")
+                  fimse
+               outrocaso
+                  escreval("Opcao invalida")
+            fimescolha
       caso 8
          escreval("Concatenacao de strings")
       caso 9
