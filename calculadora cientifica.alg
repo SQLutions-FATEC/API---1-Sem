@@ -1,9 +1,9 @@
 Algoritmo "Calculadora Cientifica"
 
 Var
-opcao,opcaobase,retornar,rpt,i,numConversao: inteiro
-num1,num2,result,resto,memoria: real
-conversao: caractere
+opcao,opcaobase,retornar,rpt,i,numConversao,memoria,verif: inteiro
+num1,num2,result,resto: real
+strConversao, strFracao, resultConversao: caractere
 
 Inicio
 
@@ -140,82 +140,7 @@ repita
       caso 6
          escreval("Funcao de 2o Grau")
       caso 7
-            escreval("______________________________")
-            escreval("|    Conversor de bases      |")
-            escreval("|----------------------------|")
-            escreval("| 1 - B10 x B2               |")
-            escreval("| 2 - B2 x B10               |")
-            escreval("| 3 - B2 x B8                |")
-            escreval("| 4 - B8 x B2                |")
-            escreval("| 5 - B2 x B16               |")
-            escreval("| 6 - B16 x B2               |")
-            escreval("| 0 - Voltar                 |")
-            escreval("|____________________________|")
-            escreva("| Selecione uma conversao:")
-            leia(opcaobase)
-            limpatela
-            
-            escolha opcaobase
-               caso 1
-                  escreval("______________________________")
-                  escreval("|     Conversor de bases     |")
-                  escreval("|----------------------------|")
-                  escreval("| num(B10) = resultado(B2)")
-                  escreva("| Digite o valor em decimal:")
-                  leia(numConversao)
-                  limpatela
-                  
-                  memoria <- numConversao
-
-                  enquanto (numConversao > 0) faca
-                     escolha (numConversao mod 2)
-                        caso 0
-                        conversao <- ("0"+conversao)
-                        caso 1
-                        conversao <- ("1"+conversao)
-                        outrocaso
-                        conversao <- "invalido"
-                        numConversao <- 0
-                     fimescolha
-                     numConversao <- (numConversao div 2)
-                  fimenquanto
-                  
-                  se conversao <> "invalido" entao
-                     escreval("______________________________")
-                     escreval("|     Conversor de bases     |")
-                     escreval("|----------------------------|")
-                     escreval("| ",memoria,"(B10) = ",conversao,"(B2)")
-                  fimse
-                  
-               caso 2
-                  escreval("______________________________")
-                  escreval("|     Conversor de bases     |")
-                  escreval("|----------------------------|")
-                  escreval("| num(B2) = resultado(B10)")
-                  escreva("| Digite o valor em decimal:")
-                  leia(numConversao)
-                  limpatela
-
-                  memoria <- numConversao
-                  
-                  i <- 0
-                  
-                  enquanto numConversao > 0 faca
-                     result <- int(result + (numConversao % 10) * (2 ^ i))
-                     numConversao <- int(numConversao / 10)
-                     i <- i + 1
-                  fimEnquanto
-                  
-                  se conversao <> "invalido" entao
-                     escreval("______________________________")
-                     escreval("|     Conversor de bases     |")
-                     escreval("|----------------------------|")
-                     escreval("| ",memoria,"(B2) = ",result,"(B10)")
-                  fimse
-                  
-               outrocaso
-                  escreval("Opcao invalida")
-            fimescolha
+         escreval("Conversao de bases")
       caso 8
          escreval("Concatenacao de strings")
       caso 9
