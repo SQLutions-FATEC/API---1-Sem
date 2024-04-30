@@ -1,9 +1,9 @@
 Algoritmo "Funcao2Grau"
 Var
 a, b, c, delta, x1, x2 : real
-raiz : inteiro
+raiz, opcao: inteiro
 Inicio
-//Leitura das variaveis para o calculo do discriminante(ou delta)
+repita
 escreval("Insira o primeiro coeficiente: ")
 leia(a)
 escreval("Insira o segundo coeficiente: ")
@@ -33,5 +33,12 @@ se delta > 0 entao
 x1 <- (-b + raiz) / (2 * a)
 x2 <- (-b - raiz) / (2 * a)
 escreval("As raizes geradas para a funcao resultam em:",x1, " e",x2)
+escreval("============================================")
+escreval("Deseja realizar a conta novamente?")
+escreval("Sim[0]")
+escreval("Não[1]")
+leia(opcao)
+escreval("============================================")
 fimse
+ate opcao = 1
 Fimalgoritmo
