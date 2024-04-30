@@ -6,9 +6,9 @@ Algoritmo "Conversor binarios"
 // Data atual  : 29/04/2024
 Var
 // Seção de Declarações das variáveis 
-opcao,opcaobase,retornar,rpt,i,numConversao,verif: inteiro
+opcao,opcaobase,retornar,rpt,i,numConversao,verif,memoriaNum: inteiro
 num1,num2,result,resto: real
-strConversao,strFracao,resultConversao,memoria: caractere
+strConversao,strFracao,resultConversao,memoriaStr: caractere
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
@@ -37,14 +37,14 @@ escolha opcaobase
       leia(numConversao)
       limpatela
 
-      memoria <- carac(numConversao)
+      memoriaNum <- numConversao
 
       enquanto (numConversao > 0) faca
          escolha (numConversao mod 2)
             caso 0
-            resultConversao <- ("0"+conversao)
+            resultConversao <- ("0"+resultConversao)
             caso 1
-            resultConversao <- ("1"+conversao)
+            resultConversao <- ("1"+resultConversao)
             outrocaso
             resultConversao <- "invalido"
             numConversao <- 0
@@ -56,7 +56,7 @@ escolha opcaobase
          escreval("______________________________")
          escreval("|     Conversor de bases     |")
          escreval("|----------------------------|")
-         escreval("| ",memoria,"(B10) = ",resultConversao,"(B2)")
+         escreval("| ",memoriaNum,"(B10) = ",resultConversao,"(B2)")
       fimse
 
    caso 2
@@ -68,7 +68,7 @@ escolha opcaobase
       leia(numConversao)
       limpatela
 
-      memoria <- carac(numConversao)
+      memoriaNum <- numConversao
 
       i <- 0
 
@@ -77,11 +77,13 @@ escolha opcaobase
          numConversao <- int(numConversao / 10)
          i <- i + 1
       fimEnquanto
+      
+      resultConversao <- Carac(int(result))
 
       escreval("______________________________")
       escreval("|     Conversor de bases     |")
       escreval("|----------------------------|")
-      escreval("| ",memoria,"(B2) = ",result,"(B10)")
+      escreval("| ",memoriaNum,"(B2) = ",result,"(B10)")
 
    caso 3
       escreval("______________________________")
@@ -92,8 +94,8 @@ escolha opcaobase
       leia(strConversao)
       limpatela
 
-      memoria <- strConversao
-      i <- strConversao
+      memoriaStr <- strConversao
+      i <- compr(strConversao)
 
       enquanto i > 0 faca
          strFracao <- copia(strConversao,(i-2),i)
@@ -153,7 +155,7 @@ escolha opcaobase
       leia(strConversao)
       limpatela
 
-      memoria <- strConversao
+      memoriaStr <- strConversao
       i <- compr(strConversao)
 
       enquanto i > 0 faca
@@ -177,7 +179,7 @@ escolha opcaobase
             verif <- 1
          fimse
          se (strFracao = "4") entao
-            resultConversao <- "010" + resultConversao
+            resultConversao <- "100" + resultConversao
             verif <- 1
          fimse
          se (strFracao = "5") entao
@@ -215,7 +217,7 @@ escolha opcaobase
       leia(strConversao)
       limpatela
 
-      memoria <- strConversao
+      memoriaStr <- strConversao
       i <- compr(strConversao)
 
       enquanto i > 0 faca
@@ -308,11 +310,13 @@ escolha opcaobase
       leia(strConversao)
       limpatela
 
-      memoria <- strConversao
+      memoriaStr <- strConversao
       i <- compr(strConversao)
 
       enquanto i > 0 faca
+         strFracao <- ""
          strFracao <- copia(strConversao,i,i)
+         strFracao <- copia(strFracao,1,1)
          verif <- 0
 
          se (strFracao = "0") entao
@@ -332,7 +336,7 @@ escolha opcaobase
             verif <- 1
          fimse
          se (strFracao = "4") entao
-            resultConversao <- "00010" + resultConversao
+            resultConversao <- "0010" + resultConversao
             verif <- 1
          fimse
          se (strFracao = "5") entao
