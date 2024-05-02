@@ -3,7 +3,7 @@ Algoritmo "Calculadora Cientifica"
 Var
 opcao,opcaobase,retornar,rpt,i,numConversao,memoria,verif, numFatorial: inteiro
 num1,num2,result,resto: real
-strConversao, strFracao, resultConversao: caractere
+str1,str2,strResult,strConversao, strFracao, resultConversao: caractere
 
 Inicio
 
@@ -82,17 +82,14 @@ repita
          escreval("|",num1," -",num2," =",result)
 
       caso 3
-         se result <> 0 entao
-            num1 <- result
-         senao
-            escreval("______________________________")
-            escreval("|  Calculadora Cientifica    |")
-            escreval("|----------------------------|")
-            escreval("| num1 * num2 = resultado")
-            escreva("| Digite o primeiro numero:")
-            leia(num1)
-            limpatela
-         fimse
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("| num1 * num2 = resultado")
+         escreva("| Digite o primeiro numero:")
+         leia(num1)
+         limpatela
+
          escreval("______________________________")
          escreval("|  Calculadora Cientifica    |")
          escreval("|----------------------------|")
@@ -109,17 +106,14 @@ repita
          escreval("|",num1," *",num2," =",result)
 
       caso 4
-         se result <> 0 entao
-            num1 <- result
-         senao
-            escreval("______________________________")
-            escreval("|  Calculadora Cientifica    |")
-            escreval("|----------------------------|")
-            escreval("| num1 / num2 = resultado")
-            escreva("| Digite o primeiro numero:")
-            leia(num1)
-            limpatela
-         fimse
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("| num1 / num2 = resultado")
+         escreva("| Digite o primeiro numero:")
+         leia(num1)
+         limpatela
+
          escreval("______________________________")
          escreval("|  Calculadora Cientifica    |")
          escreval("|----------------------------|")
@@ -170,7 +164,29 @@ repita
       caso 7
          escreval("Conversao de bases")
       caso 8
-         escreval("Concatenacao de strings")
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("| str1 + str2 = resultado")
+         escreva("| Digite a primeira string:")
+         leia(str1)
+         limpatela
+         
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",str1," + str2 = resultado")
+         escreva("| Digite a segunda string:")
+         leia(str2)
+         limpatela
+
+         strResult <- str1 + str2
+
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("|",str1," +",str2," = ",strResult)
+
       caso 9
          escreval("Juros simples ou compostos")
       caso 0
@@ -188,26 +204,6 @@ repita
    escreval("|____________________________|")
    escreva("| Selecione uma opcao:")
    leia(retornar)
-
-   limpatela
-
-   se (retornar = 1) e (result <> 0) entao
-      escreval("______________________________")
-      escreval("| Deseja repetir o valor     |")
-      escreval("| em outra operacao basica?  |")
-      escreval("|----------------------------|")
-      escreval("|",result)
-      escreval("|----------------------------|")
-      escreval("| 1 - Sim                    |")
-      escreval("| 0 - Nao                    |")
-      escreval("|____________________________|")
-      escreva("| Selecione uma opcao:")
-      leia(rpt)
-
-      se rpt = 0 entao
-         result <- 0
-      fimse
-   fimse
 
    limpatela
 
