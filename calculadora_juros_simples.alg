@@ -19,7 +19,7 @@ Inicio
          Escreval("Digite um valor maior que 0")
          Escreval
       fimse
-   ate verdadeiro // Loop infinito para taxa de juros válida
+   ate verdadeiro // Loop para taxa de juros válida
 
    Escreval
 
@@ -34,19 +34,19 @@ Inicio
 
    montante <- capital + (capital * taxa * temp / 100)
 
-   // Arredondando manualmente para duas casas decimais
+   //Arredonda manualmente para duas casas decimais
    parteInteiraMontante <- Int(montante)
    parteDecimalMontante <- Int((montante - parteInteiraMontante) * 100 + 0.5)
 
-   // Calculando os juros
+   //Calcula os juros
    juros <- montante - capital
 
-   // Separando a parte inteira e decimal dos juros
+   //Separa a parte inteira e decimal dos juros
    parteInteiraJuros <- Int(juros)
    parteDecimalJuros <- Int((juros - parteInteiraJuros) * 100 + 0.5)
 
-   // Exibindo os resultados formatados
-   Escreval("Total de juros: R$ ", parteInteiraJuros, ",", parteDecimalJuros)
-   Escreval("Total pago: R$ ", parteInteiraMontante, ",", parteDecimalMontante)
+   //Exibe os resultados formatados
+   Escreval("Total de juros: R$ ", parteInteiraJuros, ",", parteDecimalJuros,  " Reais")
+   Escreval("Total pago: R$ ", parteInteiraMontante, ",", parteDecimalMontante,  " Reais")
 
 FimAlgoritmo
