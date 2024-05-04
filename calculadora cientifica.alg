@@ -247,7 +247,7 @@ repita
                   escreval("______________________________")
                   escreval("|     Conversor de bases     |")
                   escreval("|----------------------------|")
-                  escreval("| ",memoriaNum,"(B10) = ",resultConversao,"(B2)")
+                  escreval("| ",memoria,"(B10) = ",resultConversao,"(B2)")
                fimse
 
             caso 2
@@ -274,7 +274,7 @@ repita
                escreval("______________________________")
                escreval("|     Conversor de bases     |")
                escreval("|----------------------------|")
-               escreval("| ",memoriaNum,"(B2) = ",result,"(B10)")
+               escreval("| ",memoria,"(B2) = ",result,"(B10)")
 
             caso 3
                escreval("______________________________")
