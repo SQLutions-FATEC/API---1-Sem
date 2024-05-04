@@ -22,9 +22,9 @@ Desenvolver uma Calculadora Científica capaz de realizar operações básicas e
 1. Entre na [página principal do projeto](https://github.com/SQLutions-FATEC/API-1-Semestre)
 2. Em seu computador, crie uma pasta para se copiar o projeto
 3. Através do seu terminal, acesse esta pasta e utilize o comando `git clone` com chave HTTPS ou SSH para copiar o projeto e seus arquivos para seu computador
-4. 
-![image](https://github.com/SQLutions-FATEC/API-1-Semestre/assets/77405968/d6cf6688-7716-4b2f-a6a3-512ed6fdb5c6)
 
-6. Faça o download do [VisualG](https://sourceforge.net/projects/visualg30/) no seu computador
-7. Abra o arquivo `calculadora_cientifica` do projeto no VisualG
-8. Faça bom proveito!
+![image](https://github.com/SQLutions-FATEC/API-1-Semestre/assets/77405968/87d85c50-a5a4-4cf3-ac8c-d6c8b4ac45fb)
+
+4. Faça o download do [VisualG](https://sourceforge.net/projects/visualg30/) no seu computador
+5. Abra o arquivo `calculadora_cientifica` do projeto no VisualG
+6. Faça bom proveito!
