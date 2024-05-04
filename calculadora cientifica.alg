@@ -28,17 +28,14 @@ repita
 
    escolha opcao
       caso 1
-         se result <> 0 entao
-            num1 <- result
-         senao
-            escreval("______________________________")
-            escreval("|  Calculadora Cientifica    |")
-            escreval("|----------------------------|")
-            escreval("| num1 + num2 = resultado")
-            escreva("| Digite o primeiro numero:")
-            leia(num1)
-            limpatela
-         fimse
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("| num1 + num2 = resultado")
+         escreva("| Digite o primeiro numero:")
+         leia(num1)
+         limpatela
+
          escreval("______________________________")
          escreval("|  Calculadora Cientifica    |")
          escreval("|----------------------------|")
@@ -55,17 +52,14 @@ repita
          escreval("|",num1," +",num2," =",result)
 
       caso 2
-         se result <> 0 entao
-            num1 <- result
-         senao
-            escreval("______________________________")
-            escreval("|  Calculadora Cientifica    |")
-            escreval("|----------------------------|")
-            escreval("| num1 - num2 = resultado")
-            escreva("| Digite o primeiro numero:")
-            leia(num1)
-            limpatela
-         fimse
+         escreval("______________________________")
+         escreval("|  Calculadora Cientifica    |")
+         escreval("|----------------------------|")
+         escreval("| num1 - num2 = resultado")
+         escreva("| Digite o primeiro numero:")
+         leia(num1)
+         limpatela
+
          escreval("______________________________")
          escreval("|  Calculadora Cientifica    |")
          escreval("|----------------------------|")
