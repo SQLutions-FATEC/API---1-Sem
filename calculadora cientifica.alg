@@ -1,11 +1,9 @@
 Algoritmo "Calculadora Cientifica"
 
 Var
-opcao,opcaobase,retornar,rpt,i,numConversao,memoria,verif, numFatorial: inteiro
-num1,num2,result,resto: real
+opcao,opcaoBase,opcaoJuros,retornar,rpt,i,numConversao,memoria,verif, numFatorial,temp, contador, parteInteiraMontante, parteInteiraJuros, parteDecimalMontante, parteDecimalJuros: inteiro
+num1,num2,result,resto,capital, taxa, montante, juros: real
 str1,str2,strResult,strConversao,strFracao,memoriaStr,resultConversao: caractere
-capital, taxa, montante, juros: Real
-temp, contador, parteInteiraMontante, parteInteiraJuros, parteDecimalMontante, parteDecimalJuros: Inteiro
 
 Inicio
 
@@ -176,10 +174,10 @@ repita
          escreval("| 0 - Voltar                 |")
          escreval("|____________________________|")
          escreva("| Selecione uma conversao:")
-         leia(opcaobase)
+         leia(opcaoBase)
          limpatela
 
-         escolha opcaobase
+         escolha opcaoBase
             caso 1
                escreval("______________________________")
                escreval("|     Conversor de bases     |")
@@ -580,10 +578,147 @@ repita
          escreval("|        Juros         |")
          escreval("|----------------------|")
          escreval("| 1 - Simples          |")
-         escreval("| 6 - Composto         |")
+         escreval("| 2 - Composto         |")
          escreval("| 0 - Voltar           |")
          escreval("|______________________|")
          escreva("| Selecione uma conversao:")
+         leia(opcaoJuros)
+         
+         limpatela
+         
+         escolha opcaoJuros
+            caso 1
+               Repita
+                  escreval("________________________")
+                  escreval("|    Juros Simples     |")
+                  escreval("|----------------------|")
+                  escreval("| Capital: R$")
+                  escreval("| Juros mensais: %")
+                  escreva("| Digite o valor do capital:")
+                  Leia(capital)
+               ate capital > 0
+
+               limpatela
+
+               Repita
+                  escreval("________________________")
+                  escreval("|    Juros Simples     |")
+                  escreval("|----------------------|")
+                  escreval("| Capital: R$",capital)
+                  escreval("| Juros mensais: %")
+                  escreval("| Tempo:")
+                  escreva("| Digite a taxa de juros:")
+                  Leia(taxa)
+               ate taxa >= 1
+
+               limpatela
+
+               Repita
+                  escreval("________________________")
+                  escreval("|    Juros Simples     |")
+                  escreval("|----------------------|")
+                  escreval("| Capital: R$",capital)
+                  escreval("| Juros mensais: ",taxa,"%")
+                  escreval("| Tempo:")
+                  escreva("| Digite o tempo em meses:")
+                  Leia(temp)
+               ate temp > -1
+               
+               limpatela
+               
+               montante <- capital + (capital * taxa * temp / 100)
+
+               //Arredonda manualmente para duas casas decimais
+               parteInteiraMontante <- Int(montante)
+               parteDecimalMontante <- Int((montante - parteInteiraMontante) * 100 + 0.5)
+
+               //Calcula os juros
+               juros <- montante - capital
+
+               //Separa a parte inteira e decimal dos juros
+               parteInteiraJuros <- Int(juros)
+               parteDecimalJuros <- Int((juros - parteInteiraJuros) * 100 + 0.5)
+
+               //Exibe os resultados formatados
+               escreval("________________________")
+               escreval("|    Juros Simples     |")
+               escreval("|----------------------|")
+               escreval("| Capital: R$",capital)
+               escreval("| Juros mensais: ",taxa,"%")
+               escreval("| Tempo:",temp," meses")
+               Escreval("| Total ganho em juros mensal: R$ ", parteInteiraJuros, ",", parteDecimalJuros)
+               Escreval("| Total pago: R$ ", parteInteiraMontante, ",", parteDecimalMontante)
+               
+            caso 2
+               Repita
+                  escreval("________________________")
+                  escreval("|   Juros Compostos    |")
+                  escreval("|----------------------|")
+                  escreval("| Capital: R$")
+                  escreval("| Juros mensais: %")
+                  escreva("| Digite o valor do capital:")
+                  Leia(capital)
+               ate capital > 0
+
+               limpatela
+               
+               Repita
+                  escreval("________________________")
+                  escreval("|   Juros Compostos    |")
+                  escreval("|----------------------|")
+                  escreval("| Capital: R$",capital)
+                  escreval("| Juros mensais: %")
+                  escreval("| Tempo:")
+                  escreva("| Digite a taxa de juros:")
+                  Leia(taxa)
+               ate taxa >= 1
+
+               limpatela
+
+               Repita
+                  escreval("________________________")
+                  escreval("|   Juros Compostos    |")
+                  escreval("|----------------------|")
+                  escreval("| Capital: R$",capital)
+                  escreval("| Juros mensais: ",taxa,"%")
+                  escreval("| Tempo:")
+                  escreva("| Digite o tempo em meses:")
+                  Leia(temp)
+               ate temp > -1
+               
+               limpatela
+
+               montante <- capital
+               contador <- 1
+
+               Enquanto contador <= temp faca
+                  montante <- montante + (montante * taxa / 100)
+                  contador <- contador + 1
+               FimEnquanto
+
+               //Arredonda manualmente para duas casas decimais
+               parteInteiraMontante <- Int(montante)
+               parteDecimalMontante <- Int((montante - parteInteiraMontante) * 100 + 0.5)
+
+               //Calcula os juros
+               juros <- montante - capital
+
+               //Separa a parte inteira e decimal dos juros
+               parteInteiraJuros <- Int(juros)
+               parteDecimalJuros <- Int((juros - parteInteiraJuros) * 100 + 0.5)
+
+               //Exibe os resultados formatados
+               escreval("________________________")
+               escreval("|   Juros Compostos    |")
+               escreval("|----------------------|")
+               escreval("| Capital: R$",capital)
+               escreval("| Juros mensais: ",taxa,"%")
+               escreval("| Tempo:",temp," meses")
+               Escreval("| Total ganho em juros mensal: R$ ", parteInteiraJuros, ",", parteDecimalJuros)
+               Escreval("| Total pago: R$ ", parteInteiraMontante, ",", parteDecimalMontante)
+            outrocaso
+               escreval("Opcao invalida!")
+         fimescolha
       caso 0
          escreval("Saindo!")
          interrompa
