@@ -637,9 +637,8 @@ repita
                   escreval("| Juros mensais: %")
                   escreva("| Digite o valor do capital:")
                   Leia(capital)
+                  limpatela
                ate capital > 0
-
-               limpatela
 
                Repita
                   escreval("________________________")
@@ -650,9 +649,8 @@ repita
                   escreval("| Tempo:")
                   escreva("| Digite a taxa de juros:")
                   Leia(taxa)
+                  limpatela
                ate taxa >= 1
-
-               limpatela
 
                Repita
                   escreval("________________________")
@@ -663,9 +661,8 @@ repita
                   escreval("| Tempo:")
                   escreva("| Digite o tempo em meses:")
                   Leia(temp)
+                  limpatela
                ate temp > -1
-               
-               limpatela
                
                montante <- capital + (capital * taxa * temp / 100)
 
