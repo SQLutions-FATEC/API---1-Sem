@@ -8,7 +8,7 @@ Desenvolver uma Calculadora Científica capaz de realizar operações básicas e
 
 ##  Tecnologia utilizada para desenvolver o projeto
 
-1.  VisualG 3.0 (Portugol)
+1.  VisualG 3.0 (Portugol) - https://sourceforge.net/projects/visualg30/
 
 ##  Metodologia usada no projeto
 
@@ -17,4 +17,6 @@ Desenvolver uma Calculadora Científica capaz de realizar operações básicas e
 3.  Organização das tarefas: Utilizamos o Backlog do GitHub para priorização dos tarefas.
 4.  Acompanhamento do projeto: Programamos reuniões e formulários para compartilharmos o andamento do projeto.
 
-##  Como usufluir do projeto
+##  Como utilizar o projeto
+
+1. Faça o download do VisualG 3.0 na sua máquina(https://sourceforge.net/projects/visualg30/)
