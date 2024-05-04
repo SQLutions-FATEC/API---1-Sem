@@ -351,6 +351,7 @@ repita
 
                enquanto i > 0 faca
                   strFracao <- copia(strConversao,i,i)
+                  strFracao <- copia(strFracao,1,1)
                   verif <- 0
 
                   se (strFracao = "0") entao
