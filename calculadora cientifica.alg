@@ -2,7 +2,7 @@ Algoritmo "Calculadora Cientifica"
 
 Var
 opcao,opcaoBase,opcaoJuros,retornar,rpt,i,numConversao,memoria,verif, numFatorial,temp, contador, parteInteiraMontante, parteInteiraJuros, parteDecimalMontante, parteDecimalJuros: inteiro
-num1,num2,result,resto,capital, taxa, montante, juros: real
+num1,num2,result,resto,capital, taxa, montante, juros,a, b, c, delta, x1, x2, raiz: real
 str1,str2,strResult,strConversao,strFracao,memoriaStr,resultConversao: caractere
 
 Inicio
@@ -160,7 +160,54 @@ repita
          fimse
          escreval("|_______________________________________________|")
       caso 6
-         escreval("Funcao de 2o Grau")
+         escreval("______________________________")
+         escreval("|     Funcao de 2o grau      |")
+         escreval("|----------------------------|")
+         escreval("| ax² + bx + c = 0")
+         escreva("| Digite o valor de a:")
+         leia(a)
+         limpatela
+         
+         escreval("______________________________")
+         escreval("|     Funcao de 2o grau      |")
+         escreval("|----------------------------|")
+         escreval("| ",a,"x² + bx + c = 0")
+         escreva("| Digite o valor de b:")
+         leia(b)
+         limpatela
+         
+         escreval("______________________________")
+         escreval("|     Funcao de 2o grau      |")
+         escreval("|----------------------------|")
+         escreval("| ",a,"x² + ",b,"x + c = 0")
+         escreva("| Digite o valor de c:")
+         leia(c)
+         limpatela
+         
+         delta <- b * b - 4 * a * c
+         raiz <- 0
+         se delta >= 0 entao
+            se delta > 0 entao
+               repita
+                  raiz <- raiz + 0.01
+               ate (raiz * raiz) >= delta
+            fimse
+            x1 <- (-b + raiz) / (2 * a)
+            x2 <- (-b - raiz) / (2 * a)
+            escreval("______________________________")
+            escreval("|     Funcao de 2o grau      |")
+            escreval("|----------------------------|")
+            escreval("| delta = ",delta)
+            escreval("| raiz de delta = ",raiz)
+            escreval("| x1 = ",x1,"; x2 = ",x2)
+         senao
+            escreval("______________________________")
+            escreval("|     Funcao de 2o grau      |")
+            escreval("|----------------------------|")
+            escreval("| delta = ",delta)
+            escreval("| raiz de delta = Não há raiz para valores negativos")
+            escreval("| x1 = Nao existe; x2 = Nao existe")
+         fimse
       caso 7
          escreval("______________________________")
          escreval("|    Conversor de bases      |")
