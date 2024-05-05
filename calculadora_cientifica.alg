@@ -152,7 +152,6 @@ repita
             fimpara
             escreval("| O fatorial de", numFatorial, " e igual a", result)
          fimse
-         escreval("|_______________________________________________|")
       caso 6
          escreval("______________________________")
          escreval("|     Funcao de 2o grau      |")
@@ -192,8 +191,8 @@ repita
             escreval("|     Funcao de 2o grau      |")
             escreval("|----------------------------|")
             escreval("| delta = ",delta)
-            escreval("| raiz de delta = ",raiz)
-            escreval("| x1 = ",x1,"; x2 = ",x2)
+            escreval("| raiz de delta = ",raiz:2:0)
+            escreval("| x1 = ",x1:2:0,"; x2 = ",x2:2:0)
          senao
             escreval("______________________________")
             escreval("|     Funcao de 2o grau      |")
@@ -217,6 +216,8 @@ repita
          escreva("| Selecione uma conversao:")
          leia(opcaoBase)
          limpatela
+         
+         resultConversao <- ""
 
          escolha opcaoBase
             caso 1
@@ -268,8 +269,6 @@ repita
                   numConversao <- int(numConversao / 10)
                   i <- i + 1
                fimEnquanto
-
-               resultConversao <- Carac(int(result))
 
                escreval("______________________________")
                escreval("|     Conversor de bases     |")
@@ -528,7 +527,7 @@ repita
                      verif <- 1
                   fimse
                   se (strFracao = "4") entao
-                     resultConversao <- "0010" + resultConversao
+                     resultConversao <- "0100" + resultConversao
                      verif <- 1
                   fimse
                   se (strFracao = "5") entao
