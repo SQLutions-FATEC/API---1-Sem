@@ -1,0 +1,18 @@
+{
+  "name": "calculadora-cientifica",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "keywords": [],
+  "author": "SQLution",
+  "license": "ISC",
+  "description": "Projeto do primeiro semestre da faculdade de Banco de Dados da FATEC",
+  "scripts": {
+    "run": "npx tsc index.ts && node index.js"
+  },
+  "dependencies": {
+    "eslint": "^9.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

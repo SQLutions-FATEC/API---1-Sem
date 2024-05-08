@@ -157,7 +157,7 @@ repita
          escreval("______________________________")
          escreval("|     Funcao de 2o grau      |")
          escreval("|----------------------------|")
-         escreval("| ax² + bx + c = 0")
+         escreval("| axï¿½ + bx + c = 0")
          escreva("| Digite o valor de a:")
          leia(a)
          limpatela
@@ -165,7 +165,7 @@ repita
          escreval("______________________________")
          escreval("|     Funcao de 2o grau      |")
          escreval("|----------------------------|")
-         escreval("| ",a,"x² + bx + c = 0")
+         escreval("| ",a,"xï¿½ + bx + c = 0")
          escreva("| Digite o valor de b:")
          leia(b)
          limpatela
@@ -173,7 +173,7 @@ repita
          escreval("______________________________")
          escreval("|     Funcao de 2o grau      |")
          escreval("|----------------------------|")
-         escreval("| ",a,"x² + ",b,"x + c = 0")
+         escreval("| ",a,"xï¿½ + ",b,"x + c = 0")
          escreva("| Digite o valor de c:")
          leia(c)
          limpatela
@@ -199,7 +199,7 @@ repita
             escreval("|     Funcao de 2o grau      |")
             escreval("|----------------------------|")
             escreval("| delta = ",delta)
-            escreval("| raiz de delta = Não há raiz para valores negativos")
+            escreval("| raiz de delta = Nï¿½o hï¿½ raiz para valores negativos")
             escreval("| x1 = Nao existe; x2 = Nao existe")
          fimse
       caso 7
