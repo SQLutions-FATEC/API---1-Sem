@@ -8,6 +8,7 @@ str1,str2,strResult,strConversao,strFracao,memoriaStr,resultConversao: caractere
 Inicio
 
 repita
+   result <- 0
    escreval("______________________________")
    escreval("|  Calculadora Cientifica    |")
    escreval("|----------------------------|")
@@ -256,25 +257,42 @@ repita
                escreval("|     Conversor de bases     |")
                escreval("|----------------------------|")
                escreval("| num(B2) = resultado(B10)")
-               escreva("| Digite o valor em decimal:")
-               leia(numConversao)
+               escreva("| Digite o valor em binario:")
+               leia(strConversao)
                limpatela
 
-               memoria <- numConversao
+               memoriaStr <- strConversao
+               i <- compr(strConversao)
+               contador <- 0
 
-               i <- 0
+               enquanto i > 0 faca
+                  strFracao <- copia(strConversao,i,i)
+                  strFracao <- copia(strFracao,1,1)
+                  verif <- 0
 
-               enquanto numConversao > 0 faca
-                  result <- int(result + (numConversao % 10) * (2 ^ i))
-                  numConversao <- int(numConversao / 10)
-                  i <- i + 1
+                  se (strFracao = "0") entao
+                     verif <- 1
+                  fimse
+                  se (strFracao = "1") entao
+                     result <- result + 2 ^ contador
+                     verif <- 1
+                  fimse
+                  se verif = 0 entao
+                     strConversao <- "invalido"
+                     i <- 0
+                  fimse
+
+                  contador <- contador + 1
+                  i <- i - 1
                fimEnquanto
 
                escreval("______________________________")
                escreval("|     Conversor de bases     |")
                escreval("|----------------------------|")
-               escreval("| ",memoria,"(B2) = ",result,"(B10)")
-
+               escreval("| ",strConversao,"(B2) = ",result,"(B10)")
+               
+               contador <- 0
+               
             caso 3
                escreval("______________________________")
                escreval("|     Conversor de bases     |")
