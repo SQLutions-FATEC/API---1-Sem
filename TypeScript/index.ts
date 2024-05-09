@@ -6,7 +6,7 @@ import { funcaoSegundoGrau } from "./operacoesLogicas/funcaoSegundoGrau";
 import { jurosCompostos } from "./operacoesLogicas/jurosCompostos";
 import { jurosSimples } from "./operacoesLogicas/jurosSimples";
 import { multiplicacao } from "./operacoesLogicas/multiplicacao";
-import { soma } from "./operacoesLogicas/soma";
+import { adicao } from "./operacoesLogicas/adicao";
 import { subtracao } from "./operacoesLogicas/subtracao";
 
 function calculadora() {
@@ -18,7 +18,7 @@ function calculadora() {
   jurosCompostos();
   jurosSimples();
   multiplicacao();
-  soma();
+  
   subtracao();
 }
 
