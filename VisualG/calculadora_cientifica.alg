@@ -291,7 +291,7 @@ repita
                   i <- i - 1
                fimEnquanto
 
-               se strConversao = "invalido" entao
+               se strConversao <> "invalido" entao
                   escreval("______________________________")
                   escreval("|     Conversor de bases     |")
                   escreval("|----------------------------|")
@@ -301,6 +301,7 @@ repita
                   escreval("|     Conversor de bases     |")
                   escreval("|----------------------------|")
                   escreval("| ",strConversao,"(B10) = nao ha(B10)")
+               fimse
                
                contador <- 0
                
@@ -318,6 +319,7 @@ repita
 
                enquanto i > 0 faca
                   strFracao <- copia(strConversao,(i-2),i)
+                  strFracao <- copia(strFracao,1,3)
                   verif <- 0
 
                   se (strFracao = "0") ou (strFracao = "00") ou (strFracao = "000") entao
@@ -444,6 +446,7 @@ repita
 
                enquanto i > 0 faca
                   strFracao <- copia(strConversao,(i-3),i)
+                  strFracao <- copia(strFracao,1,4)
                   verif <- 0
 
                   se (strFracao = "0") ou (strFracao = "00") ou (strFracao = "000") ou (strFracao = "0000") entao
