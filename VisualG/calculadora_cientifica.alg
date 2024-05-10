@@ -239,7 +239,7 @@ repita
                      caso 1
                      resultConversao <- ("1"+resultConversao)
                      outrocaso
-                     resultConversao <- "invalido"
+                     resultConversao <- "nao ha"
                      numConversao <- 0
                   fimescolha
                   numConversao <- (numConversao div 2)
@@ -250,6 +250,11 @@ repita
                   escreval("|     Conversor de bases     |")
                   escreval("|----------------------------|")
                   escreval("| ",memoria,"(B10) = ",resultConversao,"(B2)")
+               senao
+                  escreval("______________________________")
+                  escreval("|     Conversor de bases     |")
+                  escreval("|----------------------------|")
+                  escreval("| invalido(B10) = ",resultConversao,"(B2)")
                fimse
 
             caso 2
@@ -286,10 +291,16 @@ repita
                   i <- i - 1
                fimEnquanto
 
-               escreval("______________________________")
-               escreval("|     Conversor de bases     |")
-               escreval("|----------------------------|")
-               escreval("| ",strConversao,"(B2) = ",result,"(B10)")
+               se strConversao = "invalido" entao
+                  escreval("______________________________")
+                  escreval("|     Conversor de bases     |")
+                  escreval("|----------------------------|")
+                  escreval("| ",strConversao,"(B2) = ",result,"(B10)")
+               senao
+                  escreval("______________________________")
+                  escreval("|     Conversor de bases     |")
+                  escreval("|----------------------------|")
+                  escreval("| ",strConversao,"(B10) = nao ha(B10)")
                
                contador <- 0
                
@@ -342,7 +353,8 @@ repita
                      verif <- 1
                   fimse
                   se verif = 0 entao
-                     resultConversao <- "invalido"
+                     strConversao <- "invalido"
+                     resultConversao <- "nao ha"
                      i <- 0
                   fimse
 
@@ -405,7 +417,8 @@ repita
                   fimse
 
                   se verif = 0 entao
-                     resultConversao <- "invalido"
+                     strConversao <- "invalido"
+                     resultConversao <- "nao ha"
                      i <- 0
                   fimse
 
@@ -498,7 +511,8 @@ repita
                      verif <- 1
                   fimse
                   se verif = 0 entao
-                     resultConversao <- "invalido"
+                     strConversao <- "invalido"
+                     resultConversao <- "nao ha"
                      i <- 0
                   fimse
 
@@ -593,7 +607,8 @@ repita
                      verif <- 1
                   fimse
                   se verif = 0 entao
-                     resultConversao <- "invalido"
+                     strConversao <- "invalido"
+                     resultConversao <- "nao ha"
                      i <- 0
                   fimse
 
