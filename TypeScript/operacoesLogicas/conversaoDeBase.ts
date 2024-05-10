@@ -13,5 +13,5 @@ export function conversaoDeBase() {
    console.log("| 0 - Voltar                 |");
    console.log("|____________________________|");
    console.log("| Selecione uma conversao:");
-   opcao = Number(prompt());
+   opcao = 4;
 }

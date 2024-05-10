@@ -27,7 +27,7 @@ do {
    console.log("| 0 - Sair                   |");
    console.log("|____________________________|");
    console.log("| Selecione uma opcao:");
-   opcao = Number(prompt());
+   opcao = 5;
    console.clear();
 
    switch (opcao) {
@@ -72,7 +72,7 @@ do {
    console.log("| 0 - Sair                   |");
    console.log("|____________________________|");
    console.log("| Selecione uma opcao:");
-   retornar = Number(prompt());
+   retornar = 0;
 
    console.clear();
 } while (retornar != 0);
