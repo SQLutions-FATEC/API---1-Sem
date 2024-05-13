@@ -9,6 +9,7 @@ import { adicao } from "./operacoesLogicas/adicao";
 import { subtracao } from "./operacoesLogicas/subtracao";
 
 let opcao: number, retornar: number, result: number;
+let input = require("prompt-sync")();
 
 do {
    result = 0;
@@ -27,8 +28,9 @@ do {
    console.log("| 0 - Sair                   |");
    console.log("|____________________________|");
    console.log("| Selecione uma opcao:");
-   opcao = 5;
+   opcao = input();
    console.clear();
+   console.log("| Opção escolhida:" + opcao);
 
    switch (opcao) {
       case 1:
@@ -72,7 +74,7 @@ do {
    console.log("| 0 - Sair                   |");
    console.log("|____________________________|");
    console.log("| Selecione uma opcao:");
-   retornar = 0;
+   retornar = input();
 
    console.clear();
 } while (retornar != 0);
