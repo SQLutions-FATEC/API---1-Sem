@@ -8,11 +8,10 @@ import { multiplicacao } from "./operacoesLogicas/multiplicacao";
 import { adicao } from "./operacoesLogicas/adicao";
 import { subtracao } from "./operacoesLogicas/subtracao";
 
-let opcao: number, retornar: number, result: number;
-let input = require("prompt-sync")();
+let opcao: number, retornar: number = 0;
+var input = require("prompt-sync")();
 
 do {
-   result = 0;
    console.log("______________________________");
    console.log("|  Calculadora Cientifica    |");
    console.log("|----------------------------|");
@@ -26,9 +25,8 @@ do {
    console.log("| 8 - Concatenacao de string |");
    console.log("| 9 - Juros                  |");
    console.log("| 0 - Sair                   |");
-   console.log("|____________________________|");
-   console.log("| Selecione uma opcao:");
-   opcao = input();
+   console.log("|____________________________|");;
+   opcao = Number(input("| Selecione uma opcao: "));
    console.clear();
    console.log("| Opção escolhida:" + opcao);
 
@@ -67,14 +65,16 @@ do {
          console.log("Opcao invalida!");
    }
 
-   console.log("______________________________");
-   console.log("| Deseja retornar ao inicio? |");
-   console.log("|----------------------------|");
-   console.log("| 1 - Sim                    |");
-   console.log("| 0 - Sair                   |");
-   console.log("|____________________________|");
-   console.log("| Selecione uma opcao:");
-   retornar = input();
+   if(opcao != 0){
+      console.log("______________________________");
+      console.log("| Deseja retornar ao inicio? |");
+      console.log("|----------------------------|");
+      console.log("| 1 - Sim                    |");
+      console.log("| 0 - Sair                   |");
+      console.log("|____________________________|");
+      console.log();
+      retornar = input("| Selecione uma opcao: ");
+   }
 
    console.clear();
 } while (retornar != 0);

@@ -1,5 +1,6 @@
 export function conversaoDeBase() {
-   let opcao: number;
+   var input = require("prompt-sync")();
+   let opcaoConversao: number;
 
    console.log("______________________________");
    console.log("|    Conversor de bases      |");
@@ -12,6 +13,5 @@ export function conversaoDeBase() {
    console.log("| 6 - B16 x B2               |");
    console.log("| 0 - Voltar                 |");
    console.log("|____________________________|");
-   console.log("| Selecione uma conversao:");
-   opcao = 4;
+   opcaoConversao = input("| Selecione uma conversao:");
 }
