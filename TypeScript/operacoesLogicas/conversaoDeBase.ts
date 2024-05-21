@@ -1,5 +1,5 @@
 export function conversaoDeBase() {
-   var input = require("prompt-sync")();
+   const input = require("prompt-sync")();
    let opcaoBases: number;
 
    console.log("______________________________");
@@ -20,23 +20,30 @@ export function conversaoDeBase() {
    switch(opcaoBases){
       case 1:
          //B10 x B2
-         console.log("B10 x B2")
+         console.log("B10 x B2");
+         break;
       case 2:
          //B2 x B10
-         console.log("B2 x B10")
+         console.log("B2 x B10");
+         break;
       case 3:
          //B2 x B8
-         console.log("B2 x B8")
+         console.log("B2 x B8");
+         break;
       case 4:
          //B8 x B2
-         console.log("B8 x B2")
+         console.log("B8 x B2");
+         break;
       case 5:
          //B2 x B16
-         console.log("B2 x B16")
+         console.log("B2 x B16");
+         break;
       case 6:
          //B16 x B2
-         console.log("B16 x B2")
+         console.log("B16 x B2");
+         break;
       default:
-         console.log("Opção inválida!")
+         console.log("Opção inválida!");
+         break;
    }
 }

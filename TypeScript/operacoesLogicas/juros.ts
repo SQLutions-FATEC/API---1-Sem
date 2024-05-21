@@ -1,6 +1,6 @@
 export function juros() {
-  var input = require("prompt-sync")();
-  let opcaoJuros: number;
+  const input = require("prompt-sync")();
+  let opcaoJuros: string;
 
   console.log("_____________________________");
   console.log("|            Juros          |");
@@ -9,18 +9,23 @@ export function juros() {
   console.log("| 2 - Juros Compostos       |");
   console.log("| 0 - Voltar                |");
   console.log("|___________________________|");
-  opcaoJuros = Number(input("| Selecione uma opção:"));
+  opcaoJuros = input("| Selecione uma opção:");
 
   console.clear();
 
   switch(opcaoJuros){
-    case 1:
+    case "1":
       //Juros simples
       console.log("Juros Simples");
-    case 2:
+      break;
+    case "2":
       //Juros simples
       console.log("Juros Compostos");
+      break;
     default:
-      console.log("Opção invaálida!");
+      console.log("Opção inválida!");
+      break;
   }
+
+
 }

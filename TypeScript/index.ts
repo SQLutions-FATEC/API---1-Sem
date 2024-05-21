@@ -9,7 +9,7 @@ import { adicao } from "./operacoesLogicas/adicao";
 import { subtracao } from "./operacoesLogicas/subtracao";
 
 let opcao: number, retornar: number = 0;
-var input = require("prompt-sync")();
+const input = require("prompt-sync")();
 
 do {
    console.log("______________________________");
