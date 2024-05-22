@@ -25,7 +25,7 @@ do {
    console.log("| 8 - Concatenação de string |");
    console.log("| 9 - Juros                  |");
    console.log("| 0 - Sair                   |");
-   console.log("|____________________________|");;
+   console.log("|____________________________|");
    opcao = Number(input("| Selecione uma opção: "));
    console.clear();
    console.log("| Opção escolhida:" + opcao);
