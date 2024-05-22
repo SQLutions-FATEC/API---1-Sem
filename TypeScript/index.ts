@@ -15,18 +15,18 @@ do {
    console.log("______________________________");
    console.log("|  Calculadora Cientifica    |");
    console.log("|----------------------------|");
-   console.log("| 1 - Adicao                 |");
-   console.log("| 2 - Subtracao              |");
-   console.log("| 3 - Multiplicacao          |");
-   console.log("| 4 - Divisao                |");
+   console.log("| 1 - Adição                 |");
+   console.log("| 2 - Subtração              |");
+   console.log("| 3 - Multiplicação          |");
+   console.log("| 4 - Divisão                |");
    console.log("| 5 - Fatorial               |");
-   console.log("| 6 - Funcao de 2o grau      |");
-   console.log("| 7 - Conversao de Base Num. |");
-   console.log("| 8 - Concatenacao de string |");
+   console.log("| 6 - Função de 2o grau      |");
+   console.log("| 7 - Conversão de Base Num. |");
+   console.log("| 8 - Concatenação de string |");
    console.log("| 9 - Juros                  |");
    console.log("| 0 - Sair                   |");
    console.log("|____________________________|");;
-   opcao = Number(input("| Selecione uma opcao: "));
+   opcao = Number(input("| Selecione uma opção: "));
    console.clear();
    console.log("| Opção escolhida:" + opcao);
 
@@ -60,20 +60,21 @@ do {
          break;
       case 0:
          console.log("Saindo!");
+         retornar = 0;
          break;
       default:
-         console.log("Opcao invalida!");
+         console.log("Opção invalida!");
    }
 
    if(opcao != 0){
       console.log("______________________________");
-      console.log("| Deseja retornar ao inicio? |");
+      console.log("| Deseja retornar ao início? |");
       console.log("|----------------------------|");
       console.log("| 1 - Sim                    |");
       console.log("| 0 - Sair                   |");
       console.log("|____________________________|");
       console.log();
-      retornar = input("| Selecione uma opcao: ");
+      retornar = input("| Selecione uma opção: ");
    }
 
    console.clear();
