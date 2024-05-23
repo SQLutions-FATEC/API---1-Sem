@@ -14,7 +14,7 @@ opcaoJuros = input("| Selecione uma opção:");
 console.clear();
 
 if (opcaoJuros === "1") {
-    // Juros Simples
+    //juros simples
     let principalSimples: string;
     let taxaJurosSimples: string;
     let tempoSimples: string;
@@ -43,26 +43,26 @@ if (opcaoJuros === "1") {
     tempoSimples = input("| Digite o período de tempo (n):");
     console.clear();
 
-    // Conversão de string para número
+    //converte string para número
     const principalNum = Number(principalSimples);
     const taxaNum = Number(taxaJurosSimples) / 100;
     const tempoNum = Number(tempoSimples);
 
-    // Cálculo dos juros simples
+    //calcula juros simples
     const jurosCalculados = principalNum * taxaNum * tempoNum;
 
-    // Formatação dos resultados
+    //formata resultados
     const totalInvestido = `Total Investido = R$ ${principalNum.toFixed(2)}`;
     const totalJurosMensal = `Total ganho em juros mensal R$ ${jurosCalculados.toFixed(2)}`;
     const totalFinal = `Total R$ ${(principalNum + jurosCalculados).toFixed(2)}`;
 
-    // Exibição dos resultados
+    //exibe os resultados
     console.log("______________________________");
     console.log("|   Resultado Juros Simples   |");
     console.log("|-----------------------------|");
     console.log(`| ${totalInvestido} | ${totalJurosMensal} | ${totalFinal}`);
   } else if (opcaoJuros === "2") {
-    // Juros Compostos
+    //juros compostos
     let principalCompostos: string;
     let taxaJurosCompostos: string;
     let tempoCompostos: string;
@@ -76,19 +76,19 @@ if (opcaoJuros === "1") {
     taxaJurosCompostos = input("| Digite a taxa de juros (i) em % (use ponto como separador decimal):");
     tempoCompostos = input("| Digite o período de tempo (n):");
 
-    // Conversão de string para número
+    //converte string para número
     const principalCompostosNum = Number(principalCompostos);
     const taxaJurosCompostosNum = Number(taxaJurosCompostos) / 100; // Convertendo para decimal
     const tempoCompostosNum = Number(tempoCompostos);
 
-    // Cálculo dos juros compostos
+    //calcula juros compostos
     let montanteCompostos = principalCompostosNum * Math.pow(1 + taxaJurosCompostosNum, tempoCompostosNum); // Usando a fórmula de juros compostos
 
     const totalInvestido = `Total Investido R$ ${principalCompostosNum.toFixed(2)}`;
     const totalJurosMensal = `Total ganho em juros mensal R$ ${(montanteCompostos - principalCompostosNum).toFixed(2)}`; // Calculando os juros mensais
     const montanteFinal = `Montante R$ ${montanteCompostos.toFixed(2)}`;
 
-    // Exibição dos resultados
+    //exibe os resultados
     console.log("______________________________");
     console.log("|   Resultado Juros Compostos |");
     console.log("|----------------------------|");
