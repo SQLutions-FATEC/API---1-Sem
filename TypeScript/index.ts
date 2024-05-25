@@ -81,4 +81,11 @@ do {
   }
 
   console.clear();
+
+  if (retornar == 0) {
+    console.log("Saindo!")
+    console.log("_____________________")
+    console.log("| made by sqlutions |")
+    console.log("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
+  }
 } while (retornar != 0);
