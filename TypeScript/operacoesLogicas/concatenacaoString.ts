@@ -1,41 +1,23 @@
 const input = require("prompt-sync")();
 
-export function concatenacaoString():void {
-  
-    // Declaração de variáveis
-    let str1: string;
-    let str2: string;
-    let strResult: string;
+export function concatenacaoString(): void {
+  let str1: string;
+  let str2: string;
+  let strResult: string;
 
-    // Primeira interação
-    console.log("______________________________");
-    console.log("|  Calculadora Cientifica    |");
-    console.log("|----------------------------|");
-    console.log("| str1 + str2 = resultado");
-    str1 = input("| Digite a primeira string:") || "";
-    console.clear();
+  console.log(" ______________________________ ");
+  console.log("|   Concatenação de Strings    |");
+  console.log("|------------------------------|");
+  console.log("| Digite a primeira string:    |");
+  str1 = input("| ");
+  console.log("| Digite a segunda string:     |");
+  str2 = input("| ");
 
-    // Segunda interação
-    console.log("______________________________");
-    console.log("|  Calculadora Cientifica    |");
-    console.log("|----------------------------|");
-    console.log("|", str1, " + str2 = resultado");
-    str2 = input("| Digite a segunda string:") || "";
-    console.clear();
+  strResult = str1 + str2;
 
-    // Calcula o resultado
-    strResult = str1 + str2;
-
-    // Resultado final
-    console.log("______________________________");
-    console.log("|  Calculadora Cientifica    |");
-    console.log("|----------------------------|");
-    console.log("|", str1, " +", str2, " = ", strResult);
-
-  // Chama a função principal
-  return  
+  console.log("|------------------------------|");
+  console.log("|", str1, " + ", str2, " = ");
+  console.log("|");
+  console.log("|", strResult);
+  console.log("|______________________________|");
 }
-
-
-
-

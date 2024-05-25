@@ -1,20 +1,23 @@
+const input = require("prompt-sync")();
+
 export function fatorial() {
-    const input = require("prompt-sync")();
+  console.log(" ______________________________________ ");
+  console.log("|               Fatorial               |");
+  console.log("|--------------------------------------|");
+  console.log("| x! =                                 |");
+  console.log("| Digite o número                      |");
 
-    console.log(" ____________________________________ ");
-    console.log("|               Divisão              |");
-    console.log("|------------------------------------|");
-    console.log("| x! =                               |");
+  let numero: number = parseInt(input("| "));
 
-    let numero = parseInt(input("| Digite o número: "));
-    
-    if (isNaN(numero) || numero < 0) {
-        console.log("O número deve ser inteiro e positivo.");
-    } else {
-        let fatorial = 1;
-        for (let i = 1; i <= numero; i++) {
-            fatorial *= i;
-        }
-        console.log(`O fatorial de ${numero} é ${fatorial}.`);
+  if (isNaN(numero) || numero < 0) {
+    console.log("| O número deve ser inteiro e positivo.|");
+    console.log("|______________________________________|");
+  } else {
+    let fatorial: number = 1;
+    for (let i = 1; i <= numero; i++) {
+      fatorial *= i;
     }
+    console.log(`| O fatorial de ${numero} é ${fatorial}.`);
+    console.log("|______________________________________|");
+  }
 }
