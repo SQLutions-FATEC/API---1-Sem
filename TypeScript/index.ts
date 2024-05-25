@@ -13,7 +13,7 @@ let opcao: number,
 const input = require("prompt-sync")();
 
 do {
-  console.log("______________________________");
+  console.log(" ____________________________ ");
   console.log("|   Calculadora Cientifica   |");
   console.log("|----------------------------|");
   console.log("| 1 - Adição                 |");

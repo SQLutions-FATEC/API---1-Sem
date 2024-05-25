@@ -3,7 +3,7 @@ let input = require("prompt-sync")();
 export function adicao() {
   let resultado: number, numero2: number, numero: number;
 
-  console.log("_________________________________");
+  console.log(" _______________________________ ");
   console.log("|             Adição            |");
   console.log("|-------------------------------|");
   console.log("| Digite o primeiro número:     |");

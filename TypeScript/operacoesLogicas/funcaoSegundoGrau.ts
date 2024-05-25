@@ -8,7 +8,7 @@ export function funcaoSegundoGrau() {
   console.log(" ______________________________________ ");
   console.log("|         Equação de 2o grau           |");
   console.log("|--------------------------------------|");
-  console.log("| (a)x^2 + (b)x + (c)                  |");
+  console.log("| (a)x² + (b)x + (c)                   |");
   console.log("| Digite o valor de (a)                |");
   variavelA = Number(input("| "));
   console.log("| Digite o valor de (b)                |");
