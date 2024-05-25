@@ -21,7 +21,7 @@ do {
   console.log("| 3 - Multiplicação          |");
   console.log("| 4 - Divisão                |");
   console.log("| 5 - Fatorial               |");
-  console.log("| 6 - Função de 2o grau      |");
+  console.log("| 6 - Equação de 2o grau     |");
   console.log("| 7 - Conversão de base num. |");
   console.log("| 8 - Concatenação de strings|");
   console.log("| 9 - Juros                  |");
