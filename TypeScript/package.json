@@ -7,7 +7,7 @@
   "license": "ISC",
   "description": "Projeto do primeiro semestre da faculdade de Banco de Dados da FATEC",
   "scripts": {
-    "run": "npx tsc index.ts && node index.js"
+    "calc": "npx tsc index.ts && node index.js"
   },
   "dependencies": {
     "eslint": "^9.2.0",
