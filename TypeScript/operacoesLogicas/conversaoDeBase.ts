@@ -1,7 +1,12 @@
 const input = require("prompt-sync")();
 
-function converteBaseNumerica(valor: string, baseInicial: number, baseFinal: number): string {
-  const faixa = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/";
+function converteBaseNumerica(
+  valor: string,
+  baseInicial: number,
+  baseFinal: number
+): string {
+  const faixa =
+    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/";
   const faixaInicial = [];
   const faixaFinal = [];
 
@@ -30,7 +35,9 @@ function converteBaseNumerica(valor: string, baseInicial: number, baseFinal: num
     }
 
     if (digitoValor === -1) {
-      console.log("Dígito inválido `" + digito + "` para base " + baseInicial + ".");
+      console.log(
+        "Dígito inválido `" + digito + "` para base " + baseInicial + "."
+      );
       return "";
     }
 
@@ -148,5 +155,3 @@ export function conversaoDeBase() {
   }
   console.log("|________________________________|");
 }
-
-conversaoDeBase();

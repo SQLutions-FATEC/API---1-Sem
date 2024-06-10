@@ -40,6 +40,7 @@ Desenvolver uma Calculadora Científica capaz de realizar operações básicas e
 - Faça o download do [VsCode](https://code.visualstudio.com/)
 - Faça o download do NVM [Linux](https://github.com/nvm-sh/nvm) ou [Windows](https://github.com/coreybutler/nvm-windows/releases)
   - `wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
+  - Entre na pasta `TypeScript` através do comando `cd TypesScript`
   - Rode `nvm use`. Este comando o fará utilizar o node do projeto (.nvmrc)
 - Rode `npm install` para instalar as dependências do projeto em seu local
 - Rode `npm run calc` para executar a calculadora. O resultado aparecerá no seu terminal
