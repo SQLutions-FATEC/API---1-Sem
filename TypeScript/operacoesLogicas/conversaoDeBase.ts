@@ -1,34 +1,52 @@
 const input = require("prompt-sync")();
 
-function converteBaseNumerica(
-  valor: string,
-  baseInicial: number,
-  baseFinal: number
-) {
-  const faixa =
-    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/".split(
-      ""
-    );
-  const faixaInicial = faixa.slice(0, baseInicial);
-  const faixaFinal = faixa.slice(0, baseFinal);
+function converteBaseNumerica(valor: string, baseInicial: number, baseFinal: number): string {
+  const faixa = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/";
+  const faixaInicial = [];
+  const faixaFinal = [];
 
-  var valorDecimal = valor
-    .split("")
-    .reverse()
-    .reduce(function (acumulador: number, digito: string, index: number) {
-      if (faixaInicial.indexOf(digito) === -1)
-        console.log(
-          "Dígito inválido `" + digito + "` para base " + baseInicial + "."
-        );
-      return (acumulador +=
-        faixaInicial.indexOf(digito) * Math.pow(baseInicial, index));
-    }, 0);
-
-  let novoValor: string = "";
-  while (valorDecimal > 0) {
-    novoValor = faixaFinal[valorDecimal % baseFinal] + novoValor;
-    valorDecimal = (valorDecimal - (valorDecimal % baseFinal)) / baseFinal;
+  // Cria as faixas de caracteres para as bases inicial e final
+  for (let i = 0; i < baseInicial; i++) {
+    faixaInicial.push(faixa[i]);
   }
+  for (let i = 0; i < baseFinal; i++) {
+    faixaFinal.push(faixa[i]);
+  }
+
+  // Converter o valor da base inicial para decimal (base 10)
+  let valorDecimal = 0;
+  let potencia = 1;
+
+  for (let i = valor.length - 1; i >= 0; i--) {
+    const digito = valor[i];
+    let digitoValor = -1;
+
+    // Busca o valor do dígito na faixa inicial
+    for (let j = 0; j < faixaInicial.length; j++) {
+      if (faixaInicial[j] === digito) {
+        digitoValor = j;
+        break;
+      }
+    }
+
+    if (digitoValor === -1) {
+      console.log("Dígito inválido `" + digito + "` para base " + baseInicial + ".");
+      return "";
+    }
+
+    valorDecimal += digitoValor * potencia;
+    potencia *= baseInicial;
+  }
+
+  // Converter o valor decimal para a base final
+  let novoValor = "";
+
+  while (valorDecimal > 0) {
+    const resto = valorDecimal % baseFinal;
+    novoValor = faixaFinal[resto] + novoValor;
+    valorDecimal = Math.floor(valorDecimal / baseFinal);
+  }
+
   return novoValor || "0";
 }
 
@@ -56,7 +74,7 @@ export function conversaoDeBase() {
 
   switch (opcaoBases) {
     case 1:
-      //B10 x B2
+      // B10 x B2
       console.clear();
       console.log(`| Opção escolhida: B10 x B2      |`);
       console.log("| Digite um número em base 10:   |");
@@ -67,7 +85,7 @@ export function conversaoDeBase() {
       console.log("| O número em binário: ", numeroBinario);
       break;
     case 2:
-      //B2 x B10
+      // B2 x B10
       console.clear();
       console.log(`| Opção escolhida: B2 x B10      |`);
       console.log("| Digite um número em base 2:    |");
@@ -78,7 +96,7 @@ export function conversaoDeBase() {
       console.log("| O número em decimal: ", numeroDecimal);
       break;
     case 3:
-      //B2 x B8
+      // B2 x B8
       console.clear();
       console.log(`| Opção escolhida: B2 x B8       |`);
       console.log("| Digite um número em base 2:    |");
@@ -89,7 +107,7 @@ export function conversaoDeBase() {
       console.log("| O número em octal: ", numeroBaseOito);
       break;
     case 4:
-      //B8 x B2
+      // B8 x B2
       console.clear();
       console.log(`| Opção escolhida: B8 x B2       |`);
       console.log("| Digite um número em base 8:    |");
@@ -97,10 +115,10 @@ export function conversaoDeBase() {
 
       numeroBinario = converteBaseNumerica(numeroBaseOito, 8, 2);
 
-      console.log("| O número em binário", numeroBinario);
+      console.log("| O número em binário: ", numeroBinario);
       break;
     case 5:
-      //B2 x B16
+      // B2 x B16
       console.clear();
       console.log(`| Opção escolhida: B2 x B16      |`);
       console.log("| Digite um número em base 2:    |");
@@ -111,7 +129,7 @@ export function conversaoDeBase() {
       console.log("| O número em hexadecimal: ", numeroBaseDezesseis);
       break;
     case 6:
-      //B16 x B2
+      // B16 x B2
       console.clear();
       console.log(`| Opção escolhida: B16 x B2      |`);
       console.log("| Digite um número em base 16:   |");
@@ -130,3 +148,5 @@ export function conversaoDeBase() {
   }
   console.log("|________________________________|");
 }
+
+conversaoDeBase();
