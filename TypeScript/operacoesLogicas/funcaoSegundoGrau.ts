@@ -31,10 +31,7 @@ export function funcaoSegundoGrau() {
     console.log("| x1 = Não existe; x2 = Não existe     |");
     console.log("|______________________________________|");
   } else {
-    let raiz = 0;
-    while (raiz ** 2 < delta) {
-      raiz = raiz + 0.01;
-    }
+    let raiz = Math.sqrt(delta);
     const x1 = (-variavelB + raiz) / (2 * variavelA);
     const x2 = (-variavelB - raiz) / (2 * variavelA);
     console.log(`| O valor de x1 é ${x1.toFixed(4)}`);
