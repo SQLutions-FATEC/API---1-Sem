@@ -1,16 +1,16 @@
+import { menu } from "../menu";
+
 const input = require("prompt-sync")();
 
 export function juros() {
   let opcaoJuros: string;
 
-  console.log(" _____________________________ ");
-  console.log("|            Juros            |");
-  console.log("|-----------------------------|");
-  console.log("| 1 - Juros Simples           |");
-  console.log("| 2 - Juros Compostos         |");
-  console.log("| 0 - Voltar                  |");
-  console.log("|_____________________________|");
-  console.log("| Selecione uma opção:        |");
+menu("Juros");
+  console.log("| 1 - Juros Simples                    |");
+  console.log("| 2 - Juros Compostos                  |");
+  console.log("| 0 - Voltar                           |");
+  console.log("|______________________________________|");
+  console.log("| Selecione uma opção:                 |");
   opcaoJuros = input("| ");
 
   console.clear();

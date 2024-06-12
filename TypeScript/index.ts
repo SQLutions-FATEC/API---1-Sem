@@ -7,27 +7,26 @@ import { juros } from "./operacoesLogicas/juros";
 import { multiplicacao } from "./operacoesLogicas/multiplicacao";
 import { adicao } from "./operacoesLogicas/adicao";
 import { subtracao } from "./operacoesLogicas/subtracao";
+import { menu } from "./menu";
 
 let opcao: number,
   retornar: number = 0;
 const input = require("prompt-sync")();
 
 do {
-  console.log(" ____________________________ ");
-  console.log("|   Calculadora Cientifica   |");
-  console.log("|----------------------------|");
-  console.log("| 1 - Adição                 |");
-  console.log("| 2 - Subtração              |");
-  console.log("| 3 - Multiplicação          |");
-  console.log("| 4 - Divisão                |");
-  console.log("| 5 - Fatorial               |");
-  console.log("| 6 - Equação de 2o grau     |");
-  console.log("| 7 - Conversão de base num. |");
-  console.log("| 8 - Concatenação de strings|");
-  console.log("| 9 - Juros                  |");
-  console.log("| 0 - Sair                   |");
-  console.log("|____________________________|");
-  console.log("| Selecione uma opção:       |");
+  menu("Calculadora Científica");
+  console.log("| 1 - Adição                           |");
+  console.log("| 2 - Subtração                        |");
+  console.log("| 3 - Multiplicação                    |");
+  console.log("| 4 - Divisão                          |");
+  console.log("| 5 - Fatorial                         |");
+  console.log("| 6 - Equação de 2o grau               |");
+  console.log("| 7 - Conversão de Base Númerica       |");
+  console.log("| 8 - Concatenação de String           |");
+  console.log("| 9 - Juros                            |");
+  console.log("| 0 - Sair                             |");
+  console.log("|______________________________________|");
+  console.log("| Selecione uma opção:                 |");
   opcao = Number(input("| "));
   console.clear();
   console.log("| Opção escolhida: " + opcao);

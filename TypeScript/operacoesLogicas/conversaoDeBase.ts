@@ -1,3 +1,5 @@
+import { menu } from "../menu";
+
 const input = require("prompt-sync")();
 
 function converteBaseNumerica(
@@ -39,18 +41,16 @@ export function conversaoDeBase() {
   let numeroDecimal: string;
   let numeroBaseDezesseis: string;
 
-  console.log(" ________________________________ ");
-  console.log("|      Conversor de bases        |");
-  console.log("|--------------------------------|");
-  console.log("| 1 - B10 x B2                   |");
-  console.log("| 2 - B2 x B10                   |");
-  console.log("| 3 - B2 x B8                    |");
-  console.log("| 4 - B8 x B2                    |");
-  console.log("| 5 - B2 x B16                   |");
-  console.log("| 6 - B16 x B2                   |");
-  console.log("| 0 - Voltar                     |");
-  console.log("|________________________________|");
-  console.log("| Selecione uma conversao:       |");
+  menu("Conversor de Base");
+  console.log("| 1 - B10 x B2                         |");
+  console.log("| 2 - B2 x B10                         |");
+  console.log("| 3 - B2 x B8                          |");
+  console.log("| 4 - B8 x B2                          |");
+  console.log("| 5 - B2 x B16                         |");
+  console.log("| 6 - B16 x B2                         |");
+  console.log("| 0 - Voltar                           |");
+  console.log("|______________________________________|");
+  console.log("| Selecione uma conversao:             |");
 
   opcaoBases = Number(input("| "));
 

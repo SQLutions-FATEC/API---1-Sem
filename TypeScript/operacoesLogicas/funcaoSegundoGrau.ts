@@ -1,3 +1,5 @@
+import { menu } from "../menu";
+
 const input = require("prompt-sync")();
 
 export function funcaoSegundoGrau() {
@@ -5,9 +7,7 @@ export function funcaoSegundoGrau() {
   let variavelB: number;
   let variavelC: number;
 
-  console.log(" ______________________________________ ");
-  console.log("|         Equação de 2o grau           |");
-  console.log("|--------------------------------------|");
+  menu("Equação de 2° Grau");
   console.log("| (a)x² + (b)x + (c)                   |");
   console.log("| Digite o valor de (a)                |");
   variavelA = Number(input("| "));
