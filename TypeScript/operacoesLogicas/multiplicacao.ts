@@ -1,4 +1,4 @@
-let inputNum = require("prompt-sync")();
+const inputNum = require("prompt-sync")();
 
 export function multiplicacao() {
   let resultado: number;
