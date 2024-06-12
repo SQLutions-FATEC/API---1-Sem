@@ -1,4 +1,4 @@
-let input = require("prompt-sync")();
+const input = require("prompt-sync")();
  
 export function subtracao() {
   let resultado: number, numero2: number , numero: number;
