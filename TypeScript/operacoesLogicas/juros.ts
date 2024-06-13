@@ -20,19 +20,17 @@ export function juros() {
     let taxaJurosSimples: number;
     let tempoMeses: number;
 
-    console.log(" ___________________________________ ");
-    console.log("|            Juros Simples           |");
-    console.log("|------------------------------------|");
-    console.log("| Digite o valor investido inicial:  |");
+    menu("Juros Simples");
+    console.log("| Digite o valor investido inicial:    |");
     valorInicial = Number(input("| R$ "));
-    console.log("|                                    |");
-    console.log("| Digite o juros (em porcentagem):   |");
-    console.log("| (use ponto como separador decimal) |");
+    console.log("|                                      |");
+    console.log("| Digite o juros (em porcentagem):     |");
+    console.log("| (use ponto como separador decimal)   |");
     taxaJurosSimples = Number(input("| ")) / 100;
-    console.log("|                                    |");
-    console.log("| Digite a quantidade de meses:      |");
+    console.log("|                                      |");
+    console.log("| Digite a quantidade de meses:        |");
     tempoMeses = parseInt(input("| "));
-    console.log("|------------------------------------|");
+    console.log("|--------------------------------------|");
 
     const jurosCalculados = valorInicial * taxaJurosSimples * tempoMeses;
     const totalFinal = valorInicial + jurosCalculados;
@@ -45,19 +43,17 @@ export function juros() {
     let taxaJurosCompostos: number;
     let tempoMeses: number;
 
-    console.log(" ___________________________________ ");
-    console.log("|            Juros Compostos         |");
-    console.log("|------------------------------------|");
-    console.log("| Digite o valor investido inicial:  |");
+    menu("Juros Compostos");
+    console.log("| Digite o valor investido inicial:    |");
     valorInicial = Number(input("| R$ "));
-    console.log("|                                    |");
-    console.log("| Digite o juros (em porcentagem):   |");
-    console.log("| (use ponto como separador decimal) |");
+    console.log("|                                      |");
+    console.log("| Digite o juros (em porcentagem):     |");
+    console.log("| (use ponto como separador decimal)   |");
     taxaJurosCompostos = Number(input("| ")) / 100;
-    console.log("|                                    |");
-    console.log("| Digite a quantidade de meses:      |");
+    console.log("|                                      |");
+    console.log("| Digite a quantidade de meses:        |");
     tempoMeses = parseInt(input("| "));
-    console.log("|------------------------------------|");
+    console.log("|--------------------------------------|");
 
     const total = valorInicial * (1 + taxaJurosCompostos) ** tempoMeses;
     const lucro = total - valorInicial;
