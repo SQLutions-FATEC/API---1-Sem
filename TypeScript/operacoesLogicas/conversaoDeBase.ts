@@ -7,10 +7,10 @@ function converteBaseNumerica(
   baseInicial: number,
   baseFinal: number
 ): string {
-  const faixa =
+  const faixa: string =
     "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/";
-  const faixaInicial = [];
-  const faixaFinal = [];
+  const faixaInicial: string[] = [];
+  const faixaFinal: string[] = [];
 
   // Cria as faixas de caracteres para as bases inicial e final
   for (let i = 0; i < baseInicial; i++) {
@@ -21,15 +21,15 @@ function converteBaseNumerica(
   }
 
   // Converter o valor da base inicial para decimal (base 10)
-  let valorDecimal = 0;
-  let potencia = 1;
+  let valorDecimal: number = 0;
+  let potencia: number = 1;
 
   for (let i = valor.length - 1; i >= 0; i--) {
-    const digito = valor[i];
-    let digitoValor = -1;
+    const digito: string = valor[i];
+    let digitoValor: number = -1;
 
     // Busca o valor do dígito na faixa inicial
-    for (let j = 0; j < faixaInicial.length; j++) {
+    for (let j: number = 0; j < faixaInicial.length; j++) {
       if (faixaInicial[j] === digito) {
         digitoValor = j;
         break;
@@ -48,7 +48,7 @@ function converteBaseNumerica(
   }
 
   // Converter o valor decimal para a base final
-  let novoValor = "";
+  let novoValor: string = "";
 
   while (valorDecimal > 0) {
     const resto = valorDecimal % baseFinal;
@@ -60,7 +60,6 @@ function converteBaseNumerica(
 }
 
 export function conversaoDeBase() {
-  let opcaoBases: number;
   let numeroBinario: string;
   let numeroBaseOito: string;
   let numeroDecimal: string;
@@ -77,7 +76,7 @@ export function conversaoDeBase() {
   console.log("|______________________________________|");
   console.log("| Selecione uma conversao:             |");
 
-  opcaoBases = Number(input("| "));
+  const opcaoBases: number = Number(input("| "));
 
   switch (opcaoBases) {
     case 1:

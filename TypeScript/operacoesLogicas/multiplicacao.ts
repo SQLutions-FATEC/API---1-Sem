@@ -3,18 +3,14 @@ import { menu } from "../menu";
 const inputNum = require("prompt-sync")();
 
 export function multiplicacao() {
-  let resultado: number;
-  let numero1: number;
-  let numero2: number;
-
- menu("Multiplicação");
+  menu("Multiplicação");
   console.log("| Digite o primeiro número:            |");
-  numero1 = Number(inputNum("| "));
+  const numero1: number = Number(inputNum("| "));
   console.log("| Digite o segundo número:             |");
-  numero2 = Number(inputNum("| "));
+  const numero2: number = Number(inputNum("| "));
   console.log("|--------------------------------------|");
 
-  resultado = numero1 * numero2;
+  const resultado: number = numero1 * numero2;
   if (isNaN(resultado)) {
     console.log("| Resultado inválido                   |");
     console.log("| Razão: valores não numéricos         |");

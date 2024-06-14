@@ -3,17 +3,13 @@ import { menu } from "../menu";
 const input = require("prompt-sync")();
 
 export function concatenacaoString(): void {
-  let str1: string;
-  let str2: string;
-  let strResult: string;
-
   menu("Concantenação de String");
   console.log("| Digite a primeira string:            |");
-  str1 = input("| ");
+  const str1: string = input("| ");
   console.log("| Digite a segunda string:             |");
-  str2 = input("| ");
+  const str2: string = input("| ");
 
-  strResult = str1 + str2;
+  const strResult: string = str1 + str2;
 
   console.log("|--------------------------------------|");
   console.log("|", str1, " + ", str2, " = ");

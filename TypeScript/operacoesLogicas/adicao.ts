@@ -3,16 +3,14 @@ import { menu } from "../menu";
 const input = require("prompt-sync")();
 
 export function adicao() {
-  let resultado: number, numero2: number, numero: number;
-
   menu("Adição");
   console.log("| Digite o primeiro número:            |");
-  numero = Number(input("| "));
+  const numero: number = Number(input("| "));
   console.log("| Digite o segundo número:             |");
-  numero2 = Number(input("| "));
+  const numero2: number = Number(input("| "));
   console.log("|--------------------------------------|");
 
-  resultado = numero + numero2;
+  const resultado: number = numero + numero2;
   if (isNaN(resultado)) {
     console.log("| Resultado inválido                   |");
     console.log("| Razão: valores não numéricos         |");

@@ -3,20 +3,16 @@ import { menu } from "../menu";
 const input = require("prompt-sync")();
 
 export function funcaoSegundoGrau() {
-  let variavelA: number;
-  let variavelB: number;
-  let variavelC: number;
-
   menu("Equação de 2° Grau");
   console.log("| (a)x² + (b)x + (c)                   |");
   console.log("| Digite o valor de (a)                |");
-  variavelA = Number(input("| "));
+  const variavelA: number = Number(input("| "));
   console.log("| Digite o valor de (b)                |");
-  variavelB = Number(input("| "));
+  const variavelB: number = Number(input("| "));
   console.log("| Digite o valor de (c)                |");
-  variavelC = Number(input("| "));
+  const variavelC: number = Number(input("| "));
 
-  const delta = variavelB ** 2 - 4 * variavelA * variavelC;
+  const delta: number = variavelB ** 2 - 4 * variavelA * variavelC;
 
   if (isNaN(delta)) {
     console.log("| Resultado inválido                   |");
@@ -31,9 +27,9 @@ export function funcaoSegundoGrau() {
     console.log("| x1 = Não existe; x2 = Não existe     |");
     console.log("|______________________________________|");
   } else {
-    const raiz = Math.sqrt(delta);
-    const x1 = (-variavelB + raiz) / (2 * variavelA);
-    const x2 = (-variavelB - raiz) / (2 * variavelA);
+    const raiz: number = Math.sqrt(delta);
+    const x1: number = (-variavelB + raiz) / (2 * variavelA);
+    const x2: number = (-variavelB - raiz) / (2 * variavelA);
     console.log(`| O valor de x1 é ${x1.toFixed(4)}`);
     console.log(`| O valor de x2 é ${x2.toFixed(4)}`);
     console.log("|______________________________________|");
