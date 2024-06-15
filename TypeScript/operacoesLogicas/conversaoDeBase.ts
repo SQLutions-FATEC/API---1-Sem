@@ -51,7 +51,7 @@ function converteBaseNumerica(
   let novoValor: string = "";
 
   while (valorDecimal > 0) {
-    const resto = valorDecimal % baseFinal;
+    const resto: number = valorDecimal % baseFinal;
     novoValor = faixaFinal[resto] + novoValor;
     valorDecimal = Math.floor(valorDecimal / baseFinal);
   }
@@ -59,7 +59,7 @@ function converteBaseNumerica(
   return novoValor || "0";
 }
 
-export function conversaoDeBase() {
+export function conversaoDeBase():void {
   let numeroBinario: string;
   let numeroBaseOito: string;
   let numeroDecimal: string;

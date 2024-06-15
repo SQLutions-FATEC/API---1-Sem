@@ -2,7 +2,7 @@ import { menu } from "../menu";
 
 const input = require("prompt-sync")();
 
-export function funcaoSegundoGrau() {
+export function funcaoSegundoGrau() :void {
   menu("Equação de 2° Grau");
   console.log("| (a)x² + (b)x + (c)                   |");
   console.log("| Digite o valor de (a)                |");

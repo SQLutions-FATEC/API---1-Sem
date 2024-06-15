@@ -2,7 +2,7 @@ import { menu } from "../menu";
 
 const input = require("prompt-sync")();
 
-export function juros() {
+export function juros():void {
   menu("Juros");
   console.log("| 1 - Juros Simples                    |");
   console.log("| 2 - Juros Compostos                  |");
@@ -26,8 +26,8 @@ export function juros() {
     const tempoMeses: number = parseInt(input("| "));
     console.log("|--------------------------------------|");
 
-    const jurosCalculados = valorInicial * taxaJurosSimples * tempoMeses;
-    const totalFinal = valorInicial + jurosCalculados;
+    const jurosCalculados: number = valorInicial * taxaJurosSimples * tempoMeses;
+    const totalFinal: number = valorInicial + jurosCalculados;
 
     console.log(`| Total investido R$ ${valorInicial}`);
     console.log(`| Lucro R$ ${jurosCalculados.toFixed(2)}`);

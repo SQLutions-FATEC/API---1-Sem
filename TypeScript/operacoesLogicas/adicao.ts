@@ -2,7 +2,7 @@ import { menu } from "../menu";
 
 const input = require("prompt-sync")();
 
-export function adicao() {
+export function adicao():void {
   menu("Adição");
   console.log("| Digite o primeiro número:            |");
   const numero: number = Number(input("| "));

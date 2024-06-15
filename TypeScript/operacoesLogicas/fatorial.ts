@@ -2,8 +2,11 @@ import { menu } from "../menu";
 
 const input = require("prompt-sync")();
 
-export function fatorial() {
+export function fatorial():void {
   menu("Fatorial");
+  console.log(" ______________________________________ ");
+  console.log("|               Fatorial               |");
+  console.log("|--------------------------------------|");
   console.log("| x! =                                 |");
   console.log("| Digite o número                      |");
 
