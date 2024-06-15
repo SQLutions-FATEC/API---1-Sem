@@ -59,7 +59,7 @@ function converteBaseNumerica(
   return novoValor || "0";
 }
 
-export function conversaoDeBase():void {
+export function conversaoDeBase(): void {
   let numeroBinario: string;
   let numeroBaseOito: string;
   let numeroDecimal: string;

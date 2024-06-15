@@ -2,7 +2,7 @@ import { menu } from "../menu";
 
 const input = require("prompt-sync")();
 
-export function subtracao():void {
+export function subtracao(): void {
   menu("Subtração");
   console.log("| Digite o primeiro número:            |");
   const numero: number = Number(input("| "));
@@ -20,5 +20,4 @@ export function subtracao():void {
     console.log("| ", numero, "-", numero2, "=", resultado);
   }
   console.log("|______________________________________|");
-
 }

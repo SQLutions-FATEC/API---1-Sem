@@ -2,7 +2,7 @@ import { menu } from "../menu";
 
 const inputNum = require("prompt-sync")();
 
-export function multiplicacao():void {
+export function multiplicacao(): void {
   menu("Multiplicação");
   console.log("| Digite o primeiro número:            |");
   const numero1: number = Number(inputNum("| "));
