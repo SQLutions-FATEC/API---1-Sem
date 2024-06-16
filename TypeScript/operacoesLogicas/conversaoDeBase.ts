@@ -78,10 +78,12 @@ export function conversaoDeBase(): void {
 
   const opcaoBases: number = Number(input("| "));
 
+  console.clear();
+  menu("Conversor de Base");
+
   switch (opcaoBases) {
     case 1:
       // B10 x B2
-      console.clear();
       console.log(`| Opção escolhida: B10 x B2      |`);
       console.log("| Digite um número em base 10:   |");
       numeroDecimal = input("| ");
@@ -92,7 +94,6 @@ export function conversaoDeBase(): void {
       break;
     case 2:
       // B2 x B10
-      console.clear();
       console.log(`| Opção escolhida: B2 x B10      |`);
       console.log("| Digite um número em base 2:    |");
       numeroBinario = input("| ");
@@ -103,7 +104,6 @@ export function conversaoDeBase(): void {
       break;
     case 3:
       // B2 x B8
-      console.clear();
       console.log(`| Opção escolhida: B2 x B8       |`);
       console.log("| Digite um número em base 2:    |");
       numeroBinario = input("| ");
@@ -114,7 +114,6 @@ export function conversaoDeBase(): void {
       break;
     case 4:
       // B8 x B2
-      console.clear();
       console.log(`| Opção escolhida: B8 x B2       |`);
       console.log("| Digite um número em base 8:    |");
       numeroBaseOito = input("| ");
@@ -125,7 +124,6 @@ export function conversaoDeBase(): void {
       break;
     case 5:
       // B2 x B16
-      console.clear();
       console.log(`| Opção escolhida: B2 x B16      |`);
       console.log("| Digite um número em base 2:    |");
       numeroBinario = input("| ");
@@ -136,7 +134,6 @@ export function conversaoDeBase(): void {
       break;
     case 6:
       // B16 x B2
-      console.clear();
       console.log(`| Opção escolhida: B16 x B2      |`);
       console.log("| Digite um número em base 16:   |");
       numeroBaseDezesseis = input("| ");
